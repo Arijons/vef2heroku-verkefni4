@@ -1,3 +1,13 @@
+
+
+from sys import argv
+
+import bottle
+from bottle import *
+bottle.debug(True)
+
+
+
 import json
 from bottle import route, run , template
 
@@ -18,5 +28,7 @@ fjöldi = 3
 def serve_homepage():
     return template('disp_table',rows = mydict, cases = fjöldi)
 
-run(host="localhost", port=8080, debug=True)
+bottle.run(host='0.0.0.0', port=argv[1])
+
+
 
