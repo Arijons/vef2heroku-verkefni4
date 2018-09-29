@@ -24,7 +24,7 @@ for r in range(10):
 
 fjöldi = 3
 
-@route('/page2')
+@route('/')
 def serve_homepage():
     return template('disp_table',rows = mydict, cases = fjöldi)
 
